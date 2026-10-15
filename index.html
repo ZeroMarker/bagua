@@ -11,17 +11,24 @@
   <header>
     <button id="lang" class="lang ghost" aria-label="繁簡切換">简</button>
     <h1 data-t="title">周易占卜</h1>
-    <p class="sub" data-t="sub">三錢法起卦 · 文王六十四卦</p>
+    <p class="sub" data-t="sub">文王六十四卦</p>
   </header>
+
+  <nav id="methods" role="tablist">
+    <button data-method="coins" data-t="m_coins">三錢法</button>
+    <button data-method="yarrow" data-t="m_yarrow">蓍草法</button>
+    <button data-method="meihua" data-t="m_meihua">梅花易數</button>
+  </nav>
+  <p id="method-desc" class="desc"></p>
 
   <section id="ask">
     <input id="question" data-t-placeholder="ask" placeholder="心中默念所問之事（可不填）" maxlength="60">
     <div class="buttons">
-      <button id="toss" data-t="toss">擲錢</button>
+      <button id="toss">擲錢</button>
       <button id="auto" class="ghost" data-t="auto">一次起卦</button>
       <button id="reset" class="ghost" hidden data-t="reset">重新起卦</button>
     </div>
-    <div id="coins" aria-live="polite"></div>
+    <div id="process" aria-live="polite"></div>
     <p id="progress"></p>
   </section>
 
@@ -32,6 +39,12 @@
   </section>
 
   <section id="reading" hidden></section>
+
+  <section id="history">
+    <h2><span data-t="history">起卦記錄</span> <button id="clear-history" class="link" data-t="clear">清空</button></h2>
+    <ol id="history-list"></ol>
+    <p id="history-empty" class="desc" data-t="historyEmpty">尚無記錄</p>
+  </section>
 </main>
 <script src="web/app.js"></script>
 </body>
