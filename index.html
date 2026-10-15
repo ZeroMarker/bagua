@@ -3,22 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>周易占卜</title>
+<title data-t="title">周易占卜</title>
 <link rel="stylesheet" href="web/style.css">
 </head>
 <body>
 <main>
   <header>
-    <h1>周易占卜</h1>
-    <p class="sub">三錢法起卦 · 文王六十四卦</p>
+    <button id="lang" class="lang ghost" aria-label="繁簡切換">简</button>
+    <h1 data-t="title">周易占卜</h1>
+    <p class="sub" data-t="sub">三錢法起卦 · 文王六十四卦</p>
   </header>
 
   <section id="ask">
-    <input id="question" placeholder="心中默念所問之事（可不填）" maxlength="60">
+    <input id="question" data-t-placeholder="ask" placeholder="心中默念所問之事（可不填）" maxlength="60">
     <div class="buttons">
-      <button id="toss">擲錢</button>
-      <button id="auto" class="ghost">一次起卦</button>
-      <button id="reset" class="ghost" hidden>重新起卦</button>
+      <button id="toss" data-t="toss">擲錢</button>
+      <button id="auto" class="ghost" data-t="auto">一次起卦</button>
+      <button id="reset" class="ghost" hidden data-t="reset">重新起卦</button>
     </div>
     <div id="coins" aria-live="polite"></div>
     <p id="progress"></p>

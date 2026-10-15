@@ -42,3 +42,5 @@ button:disabled { opacity:.4; cursor:default; }
 #reading details { margin-top:14px; }
 #reading summary { cursor:pointer; color:var(--mute); }
 .q { color:var(--mute); }
+header { position:relative; }
+.lang { position:absolute; right:0; top:4px; padding:4px 12px; }
